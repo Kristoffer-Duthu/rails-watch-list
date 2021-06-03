@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.banner {
+  height: 100vh;
+  background-image: asset-url("group-movie");
+  background-size: cover;
+  h1 {
+    color: white;
+  }
+}

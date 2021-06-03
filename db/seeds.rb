@@ -20,4 +20,3 @@ results.take(10).each do |movie|
   m = Movie.create!(title: movie["title"], overview: movie["overview"], poster_url: movie["poster_path"], rating: movie["vote_average"])
   puts "created a movie: #{m.title}!"
 end
-

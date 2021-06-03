@@ -1,6 +1,8 @@
 <h1> Create a New List! </h1>
-<%= simple_form_for(@list, @bookmark) do |f| %>
+  <form action="submit" class="form-control">
+  <%= simple_form_for (@list) do |f| %>
   <%= f.input :name %>
-  <%= f.association :movies %>
-  <%= f.submit "Add your List!"%>
-<% end %>
+  <%= f.submit "Add your List!",  class: "btn btn-outline-success"%>
+  <% end %>
+</form>
+
