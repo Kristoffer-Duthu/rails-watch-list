@@ -10,17 +10,20 @@
 <div class="container">
   <div class="row" id="lists">
     <% @lists.each do |list| %>
-      <div class="col-4 my-3">
-        <div class="card" style="width: 18rem;">
-          <%= image_tag "group-movie", alt: "Theatre Pic" %>
-          <div class="card-body">
-            <h5 class="card-title"> <%= list.name %> </h5>
-            <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <%= link_to "See more", list_path(list),class: "btn btn-outline-primary" %>
+      <div data-aos="fade-left">
+        <div class="col-4 my-3">
+          <div class="card" style="width: 18rem;">
+            <%= image_tag "group-movie", alt: "Theatre Pic" %>
+            <div class="card-body">
+              <h5 class="card-title"> <%= list.name %> </h5>
+              <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <%= link_to "See more", list_path(list),class: "btn btn-outline-primary" %>
           </div>
         </div>
       </div>
+    </div>
     <% end %>
   </div>
   <%= link_to "Add a List", new_list_path(@list), class: "btn btn-outline-primary"%>
 </div>
+
