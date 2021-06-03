@@ -1,5 +1,6 @@
 <h1> Create a New List! </h1>
-<%= simple_form_for(@list) do |f| %>
+<%= simple_form_for(@list, @bookmark) do |f| %>
   <%= f.input :name %>
+  <%= f.association :movies %>
   <%= f.submit "Add your List!"%>
 <% end %>
