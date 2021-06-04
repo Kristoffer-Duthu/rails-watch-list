@@ -16,10 +16,12 @@
             <%= image_tag "https://image.tmdb.org/t/p/w500/#{movie.poster_url}", alt: "#{movie.title} image" %>
             <p class="rating"> Rating: <%= movie.rating %> </p>
             <div class="card-body">
-               <% movie.bookmarks.each do |b| %>
               <h5 class="card-title"> <%= movie.title %> </h5>
-              <p class="card-text"> <%= b.comment %> </p>
-              <%= link_to "Delete Bookmark", bookmark_path(b), method: :delete, class: "btn btn-outline-danger" %>
+               <% movie.bookmarks.each do |b| %>
+                <% if b.list_id == @list.id %>
+                <p class="card-text"> <%= b.comment %> </p>
+                <%= link_to "Delete Bookmark", bookmark_path(b), method: :delete, class: "btn btn-outline-danger" %>
+                <% end %>
               <% end %>
           </div>
         </div>
