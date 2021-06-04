@@ -3,9 +3,7 @@
     <h1>
       🎦<span id="banner-typed-text"></span>🎦
      </h1>
-     <div class="button-banner">
-      <%= link_to "See Lists!", "#lists", class: "btn btn-primary" %>
-     </div>
+     <%= link_to "See Lists!", "#lists", class: "btn btn-primary" %>
   </div>
 </div>
 
@@ -24,6 +22,9 @@
       </div>
     <% end %>
   </div>
-  <%= link_to "Add a List", new_list_path(@list), class: "btn btn-outline-primary"%>
+  <div class= "d-flex justify-content-center align-items-center">
+      <%= link_to "Add a List", new_list_path(@list), class: "btn btn-outline-primary"%>
+  </div>
+
 </div>
 

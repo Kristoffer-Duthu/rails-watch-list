@@ -1,6 +1,8 @@
-<h1>Create a New Bookmark!</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
+<div class="container">
+  <h1>Create a New Bookmark!</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
   <%= f.association :movie %>
-  <%= f.submit "Create Bookmark"%>
-<% end %>
+  <%= f.submit "Create Bookmark", class: "btn btn-outline-success"%>
+  <% end %>
+</div>
