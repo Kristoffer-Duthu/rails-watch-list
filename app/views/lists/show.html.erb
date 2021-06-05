@@ -13,7 +13,7 @@
     <% @list.movies.each do |movie| %>
         <div class="col-4 my-3">
           <div data-aos="zoom-out-down" class="card" style="width: 18rem;">
-            <%= image_tag "https://image.tmdb.org/t/p/w500/#{movie.poster_url}", alt: "#{movie.title} image" %>
+            <%= image_tag movie.poster_url, alt:"#{movie.title} image" %>
             <p class="rating"> Rating: <%= movie.rating %> </p>
             <div class="card-body">
               <h5 class="card-title"> <%= movie.title %> </h5>
