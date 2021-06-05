@@ -56,3 +56,7 @@ gem 'simple_form'
 
 # seed generator
 gem 'faker'
+
+# aliyun oss
+gem 'activestorage-aliyun'
+gem 'image_processing'

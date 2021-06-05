@@ -15,7 +15,8 @@
     <% @lists.each do |list| %>
         <div class="col-4 my-3">
           <div data-aos="zoom-out-down" class="card" style="width: 18rem;">
-            <%= image_tag "group-movie", alt: "Theatre Pic" %>
+            <% filepath = list.photo.attached? ? list.photo : "group-movie" %>
+            <%= image_tag filepath, alt: "Theatre Pic" %>
             <div class="card-body">
               <h5 class="card-title"> <%= list.name %> </h5>
               <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
