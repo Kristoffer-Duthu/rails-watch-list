@@ -1,9 +1,9 @@
-<div class="container">
-    <h1> Create a New List! </h1>
+<div class="container" style="width: 500px; border-radius: 4px; background-color: #D3D3D3; padding: 8px;">
+    <h1 style="text-align: center;"> Create a New List! </h1>
     <%= simple_form_for (@list) do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit "Add your List!", class: "btn btn-outline-success"%>
+    <%= f.submit "Add your List!", class: "btn btn-outline-secondary"%>
     <% end %>
 </div>
 
